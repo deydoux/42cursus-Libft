@@ -1,6 +1,7 @@
 NAME=libft.a
 INCLUDE=libft.h
-SOURCES=ft_isalpha.c
+SOURCES=ft_isalpha.c	\
+		ft_isdigit.c
 
 CC=gcc
 CFLAGS=-Wall -Wextra -Werror
