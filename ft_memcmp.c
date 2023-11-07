@@ -6,7 +6,7 @@
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:57:17 by deydoux           #+#    #+#             */
-/*   Updated: 2023/11/07 16:01:23 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/11/07 16:06:28 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	s1_ptr = s1;
 	s2_ptr = s2;
 	i = 0;
-	while (i < n && s1_ptr[i] == s2_ptr[i])
+	while (i < n - 1 && s1_ptr[i] == s2_ptr[i])
 		i++;
 	return (s1_ptr[i] - s2_ptr[i]);
 }
