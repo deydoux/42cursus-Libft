@@ -6,7 +6,7 @@
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:45:44 by deydoux           #+#    #+#             */
-/*   Updated: 2023/11/07 10:08:36 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/11/07 10:18:05 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	char	*src_ptr;
 	size_t	i;
 
-	if (!dest || !src)
-		return (NULL);
 	dest_ptr = dest;
 	src_ptr = (void *)src;
 	if (dest < src)
