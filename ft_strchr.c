@@ -6,9 +6,11 @@
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 13:48:24 by deydoux           #+#    #+#             */
-/*   Updated: 2023/11/07 13:54:13 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/11/07 16:24:08 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {

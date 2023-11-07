@@ -6,9 +6,11 @@
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:57:17 by deydoux           #+#    #+#             */
-/*   Updated: 2023/11/07 16:08:00 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/11/07 16:24:44 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
