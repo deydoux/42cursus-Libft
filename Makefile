@@ -15,7 +15,9 @@ SOURCES=ft_isalpha.c	\
 		ft_toupper.c	\
 		ft_tolower.c	\
 		ft_strchr.c		\
-		ft_strrchr.c
+		ft_strrchr.c	\
+		ft_strncmp.c
+
 CC=gcc
 CFLAGS=-Wall -Wextra -Werror
 ARFLAGS=-c -r -s
