@@ -6,7 +6,7 @@
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 16:43:36 by deydoux           #+#    #+#             */
-/*   Updated: 2023/11/07 17:09:15 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/11/07 17:12:19 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,4 @@ int	ft_atoi(const char *nptr)
 	while (ft_isdigit(*nptr))
 		n = n * 10 + *nptr++ - '0';
 	return (sign * n);
-}
-
-int	main(int argc, char **argv)
-{
-	printf("%i", ft_atoi(argv[1]));
 }
