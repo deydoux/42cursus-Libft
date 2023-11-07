@@ -18,7 +18,8 @@ SOURCES=ft_isalpha.c	\
 		ft_strncmp.c	\
 		ft_memchr.c		\
 		ft_memcmp.c		\
-		ft_strnstr.c
+		ft_strnstr.c	\
+		ft_atoi.c
 
 CC=gcc
 CFLAGS=-Wall -Wextra -Werror
@@ -30,7 +31,7 @@ $(NAME): $(OBJECTS)
 	$(AR) $(ARFLAGS) $@ $^
 
 %.o: %.c
-	$(CC) $(CFLAGS) -I . -c $<
+	$(CC) $(CFLAGS) -include libft.h -c $<
 
 all: $(NAME)
 
