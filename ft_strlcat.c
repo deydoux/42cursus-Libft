@@ -6,7 +6,7 @@
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 11:03:23 by deydoux           #+#    #+#             */
-/*   Updated: 2023/11/07 12:29:34 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/11/07 13:13:31 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	dst_len;
 	size_t	src_len;
 
+	if (size == 0)
+		return (0);
 	dst_len = ft_strlen(dst);
 	if (size <= dst_len)
 		return (ft_strlen(src) + size);
@@ -26,7 +28,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		dst[dst_len + src_len] = src[src_len];
 		src_len++;
 	}
-	dst[dst_len + src_len] = '\0';
+	dst[dst_len + src_len] = 0;
 	while (src[src_len])
 		src_len++;
 	return (dst_len + src_len);
