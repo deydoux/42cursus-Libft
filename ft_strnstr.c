@@ -6,7 +6,7 @@
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 16:14:07 by deydoux           #+#    #+#             */
-/*   Updated: 2023/11/07 16:35:13 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/11/07 16:41:21 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	if (*little == 0)
 		return ((char *)big);
+	if (!len)
+		return (NULL);
 	i = 0;
 	while (big[i])
 	{
