@@ -1,4 +1,5 @@
 NAME=libft.a
+INCLUDE=libft.h
 SOURCES=ft_isalpha.c	\
 		ft_isdigit.c	\
 		ft_isalnum.c	\
@@ -31,7 +32,7 @@ $(NAME): $(OBJECTS)
 	$(AR) $(ARFLAGS) $@ $^
 
 %.o: %.c
-	$(CC) $(CFLAGS) -include libft.h -c $<
+	$(CC) $(CFLAGS) -include $(INCLUDE) -c $<
 
 all: $(NAME)
 
