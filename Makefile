@@ -22,7 +22,7 @@ OBJECTS=$(SOURCES:.c=.o)
 $(NAME): $(OBJECTS)
 	$(AR) $(ARFLAGS) $@ $^
 
-%.o: %.c $(INCLUDE)
+%.o: %.c
 	$(CC) $(CFLAGS) -include $(INCLUDE) -c $<
 
 all: $(NAME)
