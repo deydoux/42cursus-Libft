@@ -6,7 +6,7 @@
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 16:23:08 by deydoux           #+#    #+#             */
-/*   Updated: 2023/11/08 16:27:59 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/11/08 16:57:03 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*map;
 	size_t	i;
 
-	if (!s)
+	if (!s || !f)
 		return (NULL);
 	map = malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!map)
