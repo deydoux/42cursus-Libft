@@ -27,7 +27,8 @@ SOURCES=ft_isalpha.c	\
 		ft_strjoin.c	\
 		ft_strtrim.c	\
 		ft_split.c		\
-		ft_itoa.c
+		ft_itoa.c		\
+		ft_strmapi.c
 
 CC=gcc
 CFLAGS=-Wall -Wextra -Werror
