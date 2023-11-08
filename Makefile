@@ -34,12 +34,14 @@ SOURCES=ft_isalpha.c	\
 		ft_putstr_fd.c	\
 		ft_putendl_fd.c	\
 		ft_putnbr_fd.c
+BONUS_SOURCES=ft_lstnew.c
 
 CC=gcc
 CFLAGS=-Wall -Wextra -Werror
 ARFLAGS=-c -r -s
 
 OBJECTS=$(SOURCES:.c=.o)
+BONUS_OBJECTS=$(BONUS_SOURCES:.c=.o)
 
 $(NAME): $(OBJECTS)
 	$(AR) $(ARFLAGS) $@ $^
@@ -49,8 +51,11 @@ $(NAME): $(OBJECTS)
 
 all: $(NAME)
 
+bonus: $(NAME) $(BONUS_OBJECTS)
+	$(AR) $(ARFLAGS) $^
+
 clean:
-	$(RM) $(OBJECTS)
+	$(RM) $(OBJECTS) $(BONUS_OBJECTS)
 
 fclean: clean
 	$(RM) $(NAME)
@@ -61,4 +66,4 @@ so:
 	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SOURCES)
 	gcc -nostartfiles -shared -o libft.so $(OBJECTS)
 
-.PHONY: all clean fclean re
+.PHONY: all bonus clean fclean re
