@@ -44,7 +44,9 @@ BONUS_SOURCES=	ft_lstnew_bonus.c		\
 
 CC=gcc
 CFLAGS=-Wall -Wextra -Werror
+AR=ar
 ARFLAGS=-c -r -s
+RM=rm -f
 
 OBJECTS=$(SOURCES:.c=.o)
 BONUS_OBJECTS=$(BONUS_SOURCES:.c=.o)
@@ -53,7 +55,7 @@ $(NAME): $(OBJECTS)
 	$(AR) $(ARFLAGS) $@ $^
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $<
+	$(CC) $(CFLAGS) -o $@ -c $<
 
 all: $(NAME)
 
