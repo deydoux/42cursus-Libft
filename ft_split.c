@@ -6,7 +6,7 @@
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 11:21:57 by deydoux           #+#    #+#             */
-/*   Updated: 2023/11/08 12:46:57 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/11/09 17:24:00 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static size_t	split_size(char const *s, char c)
 {
 	size_t	size;
 
-	size = 0;
+	size = 1;
 	while (*s)
 	{
 		if (*s != c && (!s[1] || s[1] == c))
