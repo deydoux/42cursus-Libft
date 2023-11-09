@@ -1,30 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_bonus.h                                      :+:      :+:    :+:   */
+/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/09 08:31:32 by deydoux           #+#    #+#             */
-/*   Updated: 2023/11/09 08:43:25 by deydoux          ###   ########.fr       */
+/*   Created: 2023/11/09 08:43:58 by deydoux           #+#    #+#             */
+/*   Updated: 2023/11/09 08:46:12 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_BONUS_H
-# define LIBFT_BONUS_H
-# include "libft.h"
+#include "libft_bonus.h"
 
-typedef struct s_list
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	void			*content;
-	struct s_list	*next;
-}					t_list;
-
-t_list	*ft_lstnew(void *content);
-void	ft_lstadd_front(t_list **lst, t_list *new);
-int		ft_lstsize(t_list *lst);
-t_list	*ft_lstlast(t_list *lst);
-void	ft_lstadd_back(t_list **lst, t_list *new);
-void	ft_lstdelone(t_list *lst, void (*del)(void *));
-
-#endif
+	if (lst && del)
+		del(lst);
+}
