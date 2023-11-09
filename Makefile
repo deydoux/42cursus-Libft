@@ -1,5 +1,4 @@
 NAME=libft.a
-INCLUDE=libft.h
 SOURCES=ft_isalpha.c	\
 		ft_isdigit.c	\
 		ft_isalnum.c	\
@@ -51,7 +50,7 @@ $(NAME): $(OBJECTS)
 	$(AR) $(ARFLAGS) $@ $^
 
 %.o: %.c
-	$(CC) $(CFLAGS) -include $(INCLUDE) -c $<
+	$(CC) $(CFLAGS) -c $<
 
 all: $(NAME)
 
@@ -67,7 +66,7 @@ fclean: clean
 re: fclean all
 
 so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SOURCES)
-	gcc -nostartfiles -shared -o libft.so $(OBJECTS)
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SOURCES) $(BONUS_SOURCES)
+	gcc -nostartfiles -shared -o libft.so $(OBJECTS) $(BONUS_OBJECTS)
 
 .PHONY: all bonus clean fclean re
