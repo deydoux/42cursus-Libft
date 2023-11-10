@@ -6,7 +6,7 @@
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 08:43:58 by deydoux           #+#    #+#             */
-/*   Updated: 2023/11/09 13:36:37 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/11/10 09:30:45 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (lst && del)
-		del(lst);
+	if (!lst)
+		return ;
+	if (del)
+		del(lst->content);
+	free(lst);
 }
