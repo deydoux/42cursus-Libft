@@ -6,7 +6,7 @@
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 08:47:08 by deydoux           #+#    #+#             */
-/*   Updated: 2023/11/09 13:36:37 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/11/10 09:32:38 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	while (*lst)
 	{
 		next = (*lst)->next;
-		del(*lst);
+		ft_lstdelone(*lst, del);
 		*lst = next;
 	}
 }
