@@ -6,11 +6,11 @@
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 19:56:05 by deydoux           #+#    #+#             */
-/*   Updated: 2023/11/09 13:36:37 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/11/11 11:45:52 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_bonus.h"
 
 int	ft_lstsize(t_list *lst)
 {
