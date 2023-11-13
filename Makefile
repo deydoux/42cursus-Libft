@@ -1,4 +1,5 @@
 NAME=libft.a
+HEADERS=libft.h
 SOURCES=ft_isalpha.c	\
 		ft_isdigit.c	\
 		ft_isalnum.c	\
@@ -55,7 +56,7 @@ BONUS_OBJECTS=$(BONUS_SOURCES:.c=.o)
 $(NAME): $(OBJECTS)
 	$(AR) $(ARFLAGS) $@ $^
 
-%.o: %.c
+%.o: %.c $(HEADERS)
 	$(CC) $(CFLAGS) -o $@ -c $<
 
 all: $(NAME)
