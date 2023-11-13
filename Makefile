@@ -1,5 +1,4 @@
 NAME=libft.a
-HEADERS=libft.h
 SOURCES=ft_isalpha.c	\
 		ft_isdigit.c	\
 		ft_isalnum.c	\
@@ -45,18 +44,21 @@ BONUS_SOURCES=	ft_lstnew_bonus.c		\
 				ft_lstmap_bonus.c
 
 CC=gcc
-CFLAGS=-Wall -Wextra -Werror
+CFLAGS=-Wall -Wextra -Werror -MMD
 AR=ar
 ARFLAGS=-c -r -s
 RM=rm -f
 
 OBJECTS=$(SOURCES:.c=.o)
 BONUS_OBJECTS=$(BONUS_SOURCES:.c=.o)
+DEPENDENCIES=$(SOURCES:.c=.d) $(BONUS_SOURCES:.c=.d)
 
 $(NAME): $(OBJECTS)
 	$(AR) $(ARFLAGS) $@ $^
 
-%.o: %.c $(HEADERS)
+-include $(DEPENDENCIES)
+
+%.o: %.c
 	$(CC) $(CFLAGS) -o $@ -c $<
 
 all: $(NAME)
@@ -65,7 +67,7 @@ bonus: $(NAME) $(BONUS_OBJECTS)
 	$(AR) $(ARFLAGS) $^
 
 clean:
-	$(RM) $(OBJECTS) $(BONUS_OBJECTS)
+	$(RM) $(OBJECTS) $(BONUS_OBJECTS) $(DEPENDENCIES)
 
 fclean: clean
 	$(RM) $(NAME)
