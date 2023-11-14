@@ -63,8 +63,8 @@ $(NAME): $(OBJECTS)
 
 all: $(NAME)
 
-bonus: $(NAME) $(BONUS_OBJECTS)
-	$(AR) $(ARFLAGS) $^
+bonus:
+	@$(MAKE) SOURCES="$(SOURCES) $(BONUS_SOURCES)"
 
 clean:
 	$(RM) $(OBJECTS) $(BONUS_OBJECTS) $(DEPENDENCIES)
