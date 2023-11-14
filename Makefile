@@ -43,7 +43,7 @@ BONUS_SOURCES=	ft_lstadd_back_bonus.c	\
 				ft_lstnew_bonus.c		\
 				ft_lstsize_bonus.c
 
-CC=gcc
+CC=cc
 CFLAGS=-Wall -Wextra -Werror -MMD
 AR=ar
 ARFLAGS=-c -r -s
