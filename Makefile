@@ -53,13 +53,13 @@ OBJECTS=$(SOURCES:.c=.o)
 BONUS_OBJECTS=$(BONUS_SOURCES:.c=.o)
 DEPENDENCIES=$(SOURCES:.c=.d) $(BONUS_SOURCES:.c=.d)
 
+$(NAME): $(OBJECTS)
+	$(AR) $(ARFLAGS) $@ $^
+
 -include $(DEPENDENCIES)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -o $@ -c $<
-
-$(NAME): $(OBJECTS)
-	$(AR) $(ARFLAGS) $@ $^
 
 all: $(NAME)
 
