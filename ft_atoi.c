@@ -6,7 +6,7 @@
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 16:43:36 by deydoux           #+#    #+#             */
-/*   Updated: 2023/11/14 15:59:03 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/11/15 18:24:26 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ int	ft_atoi(const char *nptr)
 		sign -= 2 * (*nptr++ == '-');
 	while (ft_isdigit(*nptr))
 	{
-		n = n * 10 + *nptr++ - '0';
-		if (n < 0)
+		if (n != (n * 10 + *nptr - '0') / 10)
 			return (-(sign == 1));
+		n = n * 10 + *nptr++ - '0';
 	}
 	return (sign * n);
 }
