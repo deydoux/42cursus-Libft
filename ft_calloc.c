@@ -6,7 +6,7 @@
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 17:30:49 by deydoux           #+#    #+#             */
-/*   Updated: 2023/11/14 09:26:00 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/11/15 08:56:59 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	size_t	bytes;
 	void	*ptr;
 
-	bytes = nmemb * size;
-	if (nmemb > bytes || size > bytes)
+	if (!size && nmemb > __SIZE_MAX__ / size)
 		return (NULL);
+	bytes = nmemb * size;
 	ptr = malloc(bytes);
 	if (ptr)
 		ft_bzero(ptr, bytes);
