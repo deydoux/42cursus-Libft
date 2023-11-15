@@ -6,7 +6,7 @@
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:09:30 by deydoux           #+#    #+#             */
-/*   Updated: 2023/11/06 16:10:37 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/11/15 18:16:28 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_isalnum(int c)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	return (8 * (ft_isalpha(c) || ft_isdigit(c)));
 }
