@@ -53,15 +53,15 @@ OBJECTS=$(SOURCES:.c=.o)
 BONUS_OBJECTS=$(BONUS_SOURCES:.c=.o)
 DEPENDENCIES=$(SOURCES:.c=.d) $(BONUS_SOURCES:.c=.d)
 
-$(NAME): $(OBJECTS)
-	$(AR) $(ARFLAGS) $@ $^
+all: $(NAME)
 
 -include $(DEPENDENCIES)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -o $@ -c $<
 
-all: $(NAME)
+$(NAME): $(OBJECTS)
+	$(AR) $(ARFLAGS) $@ $^
 
 bonus:
 	@$(MAKE) SOURCES="$(SOURCES) $(BONUS_SOURCES)"
