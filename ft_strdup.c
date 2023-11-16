@@ -6,7 +6,7 @@
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 17:45:46 by deydoux           #+#    #+#             */
-/*   Updated: 2023/11/13 13:29:32 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/11/16 19:16:42 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strdup(const char *s)
 {
-	int		size;
+	size_t	size;
 	char	*ptr;
 
 	size = sizeof(char) * (ft_strlen(s) + 1);
