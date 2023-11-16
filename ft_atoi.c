@@ -6,7 +6,7 @@
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 16:43:36 by deydoux           #+#    #+#             */
-/*   Updated: 2023/11/16 08:49:33 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/11/16 16:36:02 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static int	ft_isspace(int c)
 {
-	return (8192 * (c == ' ' || c == '\f' || c == '\n' || c == '\r' || c == '\t'
-			|| c == '\v'));
+	return (8192 * (c == ' ' || c == '\f' || c == '\n' || c == '\r'
+			|| c == '\t' || c == '\v'));
 }
 
 int	ft_atoi(const char *nptr)
