@@ -6,7 +6,7 @@
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 17:19:39 by deydoux           #+#    #+#             */
-/*   Updated: 2023/11/08 17:27:04 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/11/16 16:37:10 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,6 @@ void	ft_putnbr_fd(int n, int fd)
 		n = -n;
 	}
 	if (n >= 10)
-	{
 		ft_putnbr_fd(n / 10, fd);
-		n %= 10;
-	}
-	ft_putchar_fd(n + '0', fd);
+	ft_putchar_fd(n % 10 + '0', fd);
 }
